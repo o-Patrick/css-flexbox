@@ -1,0 +1,92 @@
+CSS Flexbox
+
+PESQUISA NO CURSO DE CSS DO CFB: inherit e inicial;
+
+- Relação container-item (estes últimos dentro do container)
+
+- Flex: 
+
+
+- Eixos:
+	- main axis:  eixo x;
+	- cross axis: eixo y;
+	- Os elementos sempre são exibidos, por padrão, do main axis (esquerda -> direita) para o cross axis (cima -> baixo);
+	- Algumas propriedades podem mudar a direção padrão (ex: flex-direction: column;);
+
+- Container
+	- Flex items:
+		- Itens dentro de um container flex são chamados flex itens;
+		- Por padrão, um flex item segue a altura do container;
+
+	- Propriedades de container:
+		- display: block;
+			- Somente ele vai ocupar a linha na qual está posicionado;
+			- O 'display' padrão de uma div é 'block';
+
+		- display: flex;
+			- Flexível;
+
+		- flex-direction:
+			- row: padrão, main axis;
+			- column: muda o padrão para cross axis;
+			- row-reverse: main axis direita -> esquerda;
+			- column-reverse: cross axis baixo -> cima;
+
+		- flex-wrap:
+			- nowrap: padrão, sem quebra de linha
+			- wrap: quebra;
+			- wrap-reverse: inverte main axis;
+
+		- flex-flow:
+			- engloba flex-direction e flex-wrap;
+		
+		- justify-content:
+			- propriedade de flexbox, porém que altera os flex-items com base no main axis;
+			- flex-start: início do eixo principal;
+			- flex-end: final do eixo principal;
+			- center: isso mesmo que parece;
+			- space-between: o primeiro item vai cola em flex-start e o último em flex-end, enquanto os outros são distribuídos com espaçamento igual entre ambos;
+			- space-around: similar ao space-between, porém os item no início e no fim não ficam colados no container, tendo um espaço;
+
+		- align-items:
+			- similar a justify-content, porém com base no cross axis;
+			- stretch: padrão, a altura do item estica de acordo com o container, é anulado caso o item tenha uma altura forçada que o contradiga;
+			- flex-start: início do eixo secundário;
+			- flex-end: fim do eixo secundário;
+			- center: centro do eixo secundário com espaçamento dos itens no container;
+			- baseline: linha base do elemento (?);
+
+		- align-content:
+			- usa o eixo cruzado;
+			- similar ao align-items, porém sem o espaçamento distribuído no container;
+			- stretch: padrão, a altura do item estica de acordo com o container, é anulado caso o item tenha uma altura forçada que o contradiga;
+			- center: centraliza os itens, porém sem um espaçamento que distribua os itens pelo container;
+			- flex-start: início do eixo, sem espaçamento...;
+			- flex-end: fim do eixo, sem espaçamento...;
+			- space-around: centro do eixo secundário com espaçamento dos itens no container, igual à align-items: center;
+			- space-between: centro do eixo secundário, os itens nas bordas colam no container;
+
+- Itens (dentro de um container)
+	- Propridades de itens
+		- flex-grow:
+			- valores de 0 à 100 definem quanto do espaço dentro de um container o item ocupa;
+			- o tamanho ainda está sujeito ao conteúdo
+		- flex-basis:
+			- valores de 0 à 100 definem quanto do espaço dentro de um container o item ocupa;
+			- é independente do tamanho do conteúdo
+			- não tem a mesma facilidade de alterar vários itens mais minuciosamente igual à flex-grow;
+			- auto: padrão;
+		- order:
+			- ordena os flex-items;
+			- aceita negativos;
+		- flex-shrink:
+			- valores de 0 ao infinito definem a capacidade de redução de um item dentro de um container;
+			- padrão: 1;
+		- flex
+			- configura flex-grow, flex-shrink e flex-basis (0 1 auto, respectivamente)
+		- align-self:
+			- alinhamento de um único item em um grupo no eixo contrário ao definido;
+			- flex-start;
+			- flex-end;
+			- center;
+			- ...;

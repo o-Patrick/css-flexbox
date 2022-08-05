@@ -1,0 +1,96 @@
+<!-- CSS Flexbox Aula 01 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body{
+			background-color: #aaa0a0;
+			font-family: arial;
+			color: #000;
+		}
+
+		.container{
+			max-width: 600px;
+			height: 400px;
+			margin: 0 auto;
+			border: 1px solid #000;
+		}
+
+		.item{
+			margin: 5px;
+			padding: 5px;
+			background: #447;
+			text-align: center;
+			font-size: 1em;
+			color: #fff;
+		}
+
+		/* classes criadas em aula */
+
+		.flexivel{
+			display: flex;
+		}
+
+		.vertical{
+			flex-direction: column;
+		}
+
+		.quebra{
+			flex-wrap: wrap;
+		}
+
+		.quebraReversa{
+			flex-wrap: wrap-reverse;
+		}
+
+		.fluxo-horizontal-quebra{
+			flex-flow: row wrap;
+		}
+
+		.justify-content{
+			justify-content: space-around;
+		}
+
+		.item-distribuido{
+			/* height: 30px; */
+			width: calc(33.3333% - 20px);
+		}
+
+		.align-itens-center{
+			align-items: center;
+		}
+
+		.flex-content{
+			justify-content: center;
+			align-content: center;
+		}
+
+		.tam0{
+			flex-grow: 0;
+		}
+
+		.tam1{
+			flex-grow: 1;
+		}
+
+		.tam2{
+			flex-grow: 2;
+		}
+
+		.tam3{
+			flex-grow: 3;
+		}
+	</style>
+	<title>CSS Flex</title>
+</head>
+<body>
+	<div class="container flexivel flex-content align-itens-center">
+		<div class="item">CFB</div>
+		<div class="item">CFB Cursos</div>
+		<div class="item">CFB Cursos CFB Cursos</div>
+	</div>
+</body>
+</html>
